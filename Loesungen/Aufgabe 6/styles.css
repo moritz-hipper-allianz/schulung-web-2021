@@ -1,0 +1,11 @@
+.gray_box {
+    height: 200px;
+    width: 200px;
+    background-color: gray;
+    margin: 8px;
+}
+.box_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

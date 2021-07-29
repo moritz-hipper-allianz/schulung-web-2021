@@ -1,0 +1,22 @@
+{
+  "name": "javascript-training",
+  "version": "1.0.0",
+  "author": "Michael Brueggemann",
+  "description": "Exercises and solutions for the JavaScript training",
+  "scripts": {
+    "parcel": "parcel --no-cache",
+    "parcelAufgabe3": "parcel ./src/03-Taschenrechner-class/b_lösung/index.html",
+    "parcelAufgabe5": "parcel ./src/05-web-component/b_lösung/index.html",
+    "updateTableOfContent": "doctoc ./README.md"
+  },
+  "dependencies": {
+    "lit": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "doctoc": "^2.0.1",
+    "parcel-bundler": "^1.12.5"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}

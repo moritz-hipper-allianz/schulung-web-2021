@@ -1,0 +1,20 @@
+.pizzavorschau {
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+    margin: 10px;
+}
+
+.pizzavorschau:first-child {
+    background-color: gold;
+}
+
+.pizzavorschau:nth-child(2) {
+    background-color: orange;
+}
+
+
+img {
+	width:200px;
+	height: 160px;
+}

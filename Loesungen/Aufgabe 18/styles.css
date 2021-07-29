@@ -1,0 +1,66 @@
+:root {
+    --font-family-standard: Arial;
+    --transition-times-tandard: .3s;
+}
+
+.pizzavorschau {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 50%;
+
+}
+
+.pizzavorschau__element {
+    font-family: var(--font-family-standard);
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+    transition: box-shadow var(--transition-times-tandard), transform var(--transition-times-tandard);
+    transform: scale(1);
+}
+
+.pizzavorschau__element.special {
+    border: 5px solid green;
+}
+
+.special + .pizzavorschau__element {
+    transform: scale(.5);
+}
+
+.pizzavorschau__element:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    transform: scale(1.1);
+
+}
+
+
+.pizzavorschau__element:first-child {
+    background-color: gold;
+}
+
+.pizzavorschau__element:nth-child(2) {
+    background-color: orange;
+}
+
+img {
+    width: 200px;
+    height: 160px;
+}
+
+form, h1, p {
+    font-family: var(--font-family-standard);
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    max-width: 600px;
+}

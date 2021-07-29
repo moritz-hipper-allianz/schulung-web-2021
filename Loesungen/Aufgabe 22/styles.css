@@ -1,0 +1,147 @@
+:root {
+    --font-family-standard: Arial;
+    --transition-times-tandard: .3s;
+    --background-color-accent: light-gray;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.mainwrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu {
+    z-index: 2;
+    position: fixed;
+    float: left;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    font-family: var(--font-family-standard);
+    transform: translateX(-180px);
+    transition: transform .3s;
+}
+
+.menu:hover {
+    transform: translateX(0);
+}
+
+.menu__header {
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: right;
+    margin: 5px;
+
+}
+
+.menu__link {
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    transition: background-color .1s;
+}
+
+.menu__link:hover {
+    background-color: lightgray;
+}
+
+.pizzavorschau {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-items: baseline;
+
+
+}
+
+.pizzavorschau__element {
+    font-family: var(--font-family-standard);
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+    transition: box-shadow var(--transition-times-tandard), transform var(--transition-times-tandard);
+    transform: scale(1);
+}
+
+.pizzavorschau__element.special {
+    border: 5px solid green;
+    animation-name: blinking;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.special + .pizzavorschau__element {
+    // transform: scale(.5);
+}
+
+.pizzavorschau__element:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    transform: scale(1.1);
+
+}
+
+
+.pizzavorschau__element:first-child {
+    background-color: gold;
+}
+
+.pizzavorschau__element:nth-child(2) {
+    background-color: orange;
+}
+
+img {
+    width: 200px;
+    height: 160px;
+}
+
+form, h1, p {
+    font-family: var(--font-family-standard);
+}
+
+.center {
+    max-width: 600px;
+}
+
+@keyframes blinking {
+   0% {
+   	background-color: green;
+   }
+   50% {
+   	background-color: red;
+   }
+   100% {
+   	background-color: green;
+   }
+}
+
+@media screen and (max-width: 600px) {
+    .pizzavorschau {
+        flex-flow: column;
+        justify-items: center;
+    }
+    .center {
+        width: 100vw;
+    }
+    .menu {
+        width: 100%;
+        transform: translateX(-90vw);
+    }
+}
